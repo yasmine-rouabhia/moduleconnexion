@@ -1,0 +1,25 @@
+body
+{
+    background-image:url("images/fondadmin.png");
+    background-size: cover;
+    text-align: center;
+    font-family: Corbel;
+}
+
+tr
+{
+    color: aliceblue;
+    font-size: 25px;
+}
+td
+{
+    color: black;
+    font-size: 25px;
+}
+
+ul
+{
+    display: inline;
+
+
+}

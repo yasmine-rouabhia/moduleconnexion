@@ -1,0 +1,32 @@
+.formulaire
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: grey;
+}
+
+
+table, font
+{
+    background: #eaf6d6;
+}
+
+body
+{
+    background: linear-gradient(white,#bdf89c);
+    background-repeat: no-repeat ;
+    font-size: larger;
+
+}
+
+input
+{
+    color: grey;
+    background: white;
+}
+
+.partitrois, h4
+{
+    color:#50b9d7;
+}

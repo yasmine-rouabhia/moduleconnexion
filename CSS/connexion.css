@@ -1,0 +1,18 @@
+h4
+{
+    text-align: center;
+}
+
+body
+{
+    background: linear-gradient(lightskyblue, #d00d41);
+    background-repeat: no-repeat;
+}
+
+.conect
+{
+    display: flex;
+    justify-content: center;
+
+
+}
