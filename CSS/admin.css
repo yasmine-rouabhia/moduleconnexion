@@ -1,9 +1,8 @@
 body
 {
-    background-image:url("images/fondadmin.png");
+    background-image:url("../images/fondadmin.png");
     background-size: cover;
     text-align: center;
-    font-family: Corbel;
 }
 
 tr
@@ -14,12 +13,10 @@ tr
 td
 {
     color: black;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 ul
 {
     display: inline;
-
-
 }

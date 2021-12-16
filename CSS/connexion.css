@@ -7,12 +7,22 @@ body
 {
     background: linear-gradient(lightskyblue, #d00d41);
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 .conect
 {
     display: flex;
     justify-content: center;
-
-
+    height: 65%;
+    text-align: center;
 }
+
+.formul
+{
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+

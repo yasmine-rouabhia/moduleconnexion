@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="CSS/acceuil.css">
     <title>Module de connexion</title>
 </head>
-    <body>
+<body>
     <header class="premier">
         <div class="hautdepage">
             <nav class="navbar">
@@ -39,6 +39,7 @@ session_start();
             </nav>
         </div>
     </header>
+    <div class="conect">
         <section class="partiun">
             <h4>
                 New Project
@@ -54,16 +55,17 @@ session_start();
         </section>
 
         <section class="liens">
-           <h3><a href="">LIEN GITHUB</a></h3>
+           <h3><a href="https://github.com/yasmine-rouabhia/moduleconnexion">LIEN GITHUB</a></h3>
         </section>
     <?php
     }
     ?>
-    <footer>
-        <div class="copyright">
-            Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
-        </div>
-    </footer>
-    </body>
+    </div>
+<footer class="site-footer">
+    <div class="copyright">
+        Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
+    </div>
+</footer>
+</body>
 </html>
 

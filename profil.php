@@ -2,7 +2,7 @@
 session_start();
 
 $login = $_SESSION['data'];
-var_dump($login);
+//var_dump($login);
 
 if (isset($_POST['confirmer']))
 {
@@ -62,6 +62,7 @@ if (isset($_POST['confirmer']))
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/acceuil.css">
+    <link rel="stylesheet" href="CSS/profil.css">
     <title>Module de connexion</title>
 </head>
 <body>
@@ -85,6 +86,7 @@ if (isset($_POST['confirmer']))
         </nav>
     </div>
 </header>
+            <tbody>
 <section class="partitrois">
     <h4>
         Modification du Profil
@@ -93,7 +95,6 @@ if (isset($_POST['confirmer']))
 <div class="profils">
     <form action="profil.php" method="post">
         <table>
-            <tbody>
             <tr>
                 <td align="right">
                     <label for="login">Login :</label>
@@ -144,6 +145,7 @@ if (isset($_POST['confirmer']))
             </tbody>
         </table>
     </form>
+</div>
     <?php
     }else{
     ?>
@@ -153,14 +155,15 @@ if (isset($_POST['confirmer']))
         echo '<font color="red">'.$erreur. "</font>";
     }
     ?>
-</div>
-<footer>
+
+<footer class="site-footer">
     <div class="copyright">
         Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
     </div>
-    <footer>
-    <?php
-    }
-    ?>
+<footer>
+
 </body>
 </html>
+<?php
+}
+?>

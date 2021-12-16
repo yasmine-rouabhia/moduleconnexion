@@ -143,7 +143,7 @@ mysqli_set_charset($bdd, 'utf8');
     ?>
 </div>
 </tbody>
-<footer>
+<footer class="site-footer">
     <div class="copyright">
         Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
     </div>

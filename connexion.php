@@ -59,10 +59,12 @@ if (isset($_POST['validerco'])) {
         Connexion
     </h4>
 </section>
-<tbody>
+
 <div class="conect">
     <form action="connexion.php" method="post">
+        <div class="formul">
         <table>
+            <tbody >
             <tr>
                 <td>
                     <label for="login">Login :</label>
@@ -87,7 +89,9 @@ if (isset($_POST['validerco'])) {
                     <input value="Se connecter" type="submit" name="validerco">
                 </td>
             </tr>
+            </tbody>
         </table>
+        </div>
     </form>
     <?php
     if (isset($erreur)) {
@@ -95,11 +99,10 @@ if (isset($_POST['validerco'])) {
     }
     ?>
 </div>
-</tbody>
-<footer>
+<footer class="site-footer">
     <div class="copyright">
         Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
     </div>
-    <footer>
+<footer>
 </body>
 </html>

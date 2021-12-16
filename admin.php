@@ -18,7 +18,7 @@ $utilisateurs = mysqli_fetch_all($requete,MYSQLI_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/acceuil.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="CSS/admin.css">
     <title>Module de connexion</title>
 </head>
 <body>
@@ -68,7 +68,7 @@ $utilisateurs = mysqli_fetch_all($requete,MYSQLI_ASSOC);
         </div>
     </table>
     </tbody>
-<footer>
+<footer class="site-footer">
     <div class="copyright">
         Copyright © Tous droits réservés. Yasmine étudiant LAPLATEFORME
     </div>
