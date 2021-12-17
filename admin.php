@@ -3,8 +3,6 @@
 //Connexion à la Base De Donnée
 include "lien.php";
 
-mysqli_set_charset($bdd, 'utf8');
-
 $requete =mysqli_query($bdd,"SELECT * FROM utilisateurs");
 
 $utilisateurs = mysqli_fetch_all($requete,MYSQLI_ASSOC);

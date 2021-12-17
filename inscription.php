@@ -2,7 +2,6 @@
 
 //connexion à la Base De Donnée
 include "lien.php";
-mysqli_set_charset($bdd, 'utf8');
 
 //Vérification du formulaire
     if(isset($_POST['valider']))
@@ -74,6 +73,7 @@ mysqli_set_charset($bdd, 'utf8');
                 <img src="images/3505254.png">
             </div>
             <h1>My Web Site<span class="rose">.</span></h1>
+            <li><a href="index.php">Acceuil</a></li>
         </nav>
     </div>
 </header>

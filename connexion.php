@@ -3,31 +3,32 @@ session_start();
 
 //on se connecte à la base de données:
 include "lien.php";
-mysqli_set_charset($bdd, 'utf8');
 //var_dump($_SESSION);
 
 if (isset($_POST['validerco'])) {
-    $loginco = $_POST['loginco'];
-    $passwordco = $_POST['passwordco'];
-
-    $loginco = htmlspecialchars(trim($loginco));
-    $passwordco = htmlspecialchars(trim($passwordco));
+    $loginco = htmlspecialchars(trim($_POST['loginco']));
+    $passwordco = htmlspecialchars(trim($_POST['passwordco']));
 
     if (!empty($loginco) && !empty($passwordco)) {
         $repLogin = mysqli_query($bdd, "SELECT * FROM utilisateurs WHERE login = '$loginco' AND password= '$passwordco'");
 
         $result = mysqli_fetch_assoc($repLogin);
         $repPassword = $result['password'];
-
-        if ($loginco == 'admin' && $passwordco == 'admin')
+var_dump($result);
+        if(count($result) !=0 )
         {
-            $_SESSION['data'] = $result;
-            header("Location: admin.php");
+            if ($loginco == 'admin' && $passwordco == 'admin')
+            {
+                $_SESSION['data'] = $result;
+                header("Location: admin.php");
+            }
+            else {
+                $_SESSION['data'] = $result;
+                header("Location: profil.php");
+            }
         }
-
-        else {
-            $_SESSION['data'] = $result;
-            header("Location: profil.php");
+        else
+        {
             $erreur = "Login ou password incorrect ou incomplet";
         }
     }
@@ -51,6 +52,7 @@ if (isset($_POST['validerco'])) {
                 <img src="images/3505254.png">
             </div>
             <h1>My Web Site<span class="rose">.</span></h1>
+            <li><a href="index.php">Acceuil</a></li>
         </nav>
     </div>
 </header>

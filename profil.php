@@ -33,7 +33,7 @@ if (isset($_POST['confirmer']))
                 if ($result == true)
                 {
                     $_SESSION['data'] = $result;
-                    header('location:profil.php');
+                    header('location: index.php');
 
                     echo ('modification effectuées'); // ne s'affiche pas :/
                 }
