@@ -2,7 +2,7 @@
 session_start();
 
 //on se connecte à la base de données:
-$bdd = mysqli_connect('localhost', 'root', '', 'yasmine-rouabhia_moduleconnexion');
+include "lien.php";
 mysqli_set_charset($bdd, 'utf8');
 //var_dump($_SESSION);
 

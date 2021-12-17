@@ -1,7 +1,8 @@
 <?php
 
 //Connexion à la Base De Donnée
-$bdd = mysqli_connect('localhost','root', '', 'yasmine-rouabhia_moduleconnexion');
+include "lien.php";
+
 mysqli_set_charset($bdd, 'utf8');
 
 $requete =mysqli_query($bdd,"SELECT * FROM utilisateurs");
@@ -44,7 +45,7 @@ $utilisateurs = mysqli_fetch_all($requete,MYSQLI_ASSOC);
     </div>
 </header>
     <tbody>
-    <?php foreach ($utilisateurs as $utilisateur){ ?>
+
     <table border ="3" cellpadding="3" cellspacing="3">
         <tr>
             <th>Id</th>
@@ -53,7 +54,7 @@ $utilisateurs = mysqli_fetch_all($requete,MYSQLI_ASSOC);
             <th>Nom</th>
             <th>Password</th>
         </tr>
-
+        <?php foreach ($utilisateurs as $utilisateur){ ?>
         <tr>
             <td> <?php echo $utilisateur['id'];?> </td>
             <td> <?php echo $utilisateur['login'];?> </td>

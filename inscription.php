@@ -1,7 +1,7 @@
 <?php
 
 //connexion à la Base De Donnée
-$bdd = mysqli_connect('localhost','root', '', 'yasmine-rouabhia_moduleconnexion');
+include "lien.php";
 mysqli_set_charset($bdd, 'utf8');
 
 //Vérification du formulaire

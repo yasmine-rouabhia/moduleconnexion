@@ -13,9 +13,9 @@ if (isset($_POST['confirmer']))
     $newpassword2 = $_POST['newpassword2'];
     $id = $_SESSION['data']['id'];
 
-    if (isset($newlogin) && isset($newprenom) && isset($newnom) && isset($newpassword) && isset($newpassword2))
+    if (!empty($newlogin) && !empty($newprenom) && !empty($newnom) && !empty($newpassword) && !empty($newpassword2))
     {
-        $bdd = mysqli_connect('localhost', 'root', '', 'yasmine-rouabhia_moduleconnexion');
+        include "lien.php";
 
         if ($bdd == true)
         {
@@ -100,7 +100,7 @@ if (isset($_POST['confirmer']))
                     <label for="login">Login :</label>
                 </td>
                 <td>
-                    <input type="text" name="newlogin"  placeholder="<?php echo $login['login']?>">
+                    <input type="text" name="newlogin"  value="<?php echo $login['login']?>">
                 </td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@ if (isset($_POST['confirmer']))
                     <label for="prenom">Prénom :</label>
                 </td>
                 <td>
-                    <input type="text" name="newprenom"  placeholder="<?php echo $login['prenom']?>">
+                    <input type="text" name="newprenom"  value="<?php echo $login['prenom']?>">
                 </td>
             </tr>
             <tr>
@@ -116,7 +116,7 @@ if (isset($_POST['confirmer']))
                     <label for="nom">Nom :</label>
                 </td>
                 <td>
-                    <input type="text" name="newnom"  placeholder="<?php echo $login['nom']?>">
+                    <input type="text" name="newnom"  value="<?php echo $login['nom']?>">
                 </td>
             </tr>
             <tr>
@@ -124,7 +124,7 @@ if (isset($_POST['confirmer']))
                     <label for="password">Mot de passe :</label>
                 </td>
                 <td>
-                    <input type="password" name="newpassword" placeholder="<?php echo $login['password']?>">
+                    <input type="password" name="newpassword" placeholder="Confirmer mot de passe">
                 </td>
             </tr>
             <tr>
@@ -132,7 +132,7 @@ if (isset($_POST['confirmer']))
                     <label for="password2">Confirmez :</label>
                 </td>
                 <td>
-                    <input type="password" name="newpassword2" placeholder="Confirme le">
+                    <input type="password" name="newpassword2" placeholder="Confirme le mot de passe">
                 </td>
             </tr>
             <tr>
